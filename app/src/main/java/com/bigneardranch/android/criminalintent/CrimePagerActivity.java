@@ -47,5 +47,10 @@ public class CrimePagerActivity extends AppCompatActivity {
             }
         });
         mViewPager.setCurrentItem(mCrimes.indexOf(crimeLab.getCrime(crimeId)));
+
+        findViewById(R.id.delete_crime_btn).setOnClickListener(v -> {
+            crimeLab.removeCrime(mCrimes.get(mViewPager.getCurrentItem()).getId());
+            finish();
+        });
     }
 }
