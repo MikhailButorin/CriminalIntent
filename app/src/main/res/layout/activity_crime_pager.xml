@@ -12,22 +12,13 @@
     </android.support.v4.view.ViewPager>
 
     <Button
-        android:id="@+id/first_crime_button"
+        android:id="@+id/delete_crime_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_gravity="bottom|start"
-        android:text="First Crime"
-        android:background="@color/colorAccent" />
-
-    <Button
-        android:id="@+id/last_crime_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_gravity="bottom|end"
-        android:text="Last Crime"
-        android:background="@color/colorAccent" />
-
+        android:layout_margin="@dimen/base_margin"
+        android:padding="@dimen/small_margin"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="@string/delete_crime"
+        android:background="@color/colorDeleteButton"/>
 
 </FrameLayout>
