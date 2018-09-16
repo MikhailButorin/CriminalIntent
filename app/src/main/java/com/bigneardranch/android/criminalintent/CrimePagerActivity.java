@@ -46,10 +46,15 @@ public class CrimePagerActivity extends AppCompatActivity {
                 return mCrimes.size();
             }
         });
-        mViewPager.setCurrentItem(mCrimes.indexOf(crimeLab.getCrime(crimeId)));
+        for (int i = 0; i < mCrimes.size(); i++) {
+            if (mCrimes.get(i).getId().equals(crimeId)) {
+                mViewPager.setCurrentItem(i);
+                break;
+            }
+        }
 
         findViewById(R.id.delete_crime_btn).setOnClickListener(v -> {
-            crimeLab.removeCrime(mCrimes.get(mViewPager.getCurrentItem()).getId());
+            crimeLab.deleteCrime(mCrimes.get(mViewPager.getCurrentItem()));
             finish();
         });
     }
